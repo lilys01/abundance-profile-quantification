@@ -60,6 +60,9 @@ cat *_1.fq > bacteria_large_1.fq
 cat *_2.fq > bacteria_large_2.fq
 ```
 # Database Creation
+```bash
+kraken2-2.0.8-beta/kraken2-build --download-taxonomy --use-ftp --threads 32 --db databases/strex
+```
 # Classification
 For each set of paired reads
 ```bash
