@@ -1,3 +1,7 @@
+# Launch Container with 64 GB RAM
+```bash
+launch-scipy-ml.sh -m 64 -c 8
+```
 # Paired Read Simulation
 ## 45 MB
 ```bash
