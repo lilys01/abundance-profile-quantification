@@ -63,6 +63,10 @@ cat *_2.fq > bacteria_large_2.fq
 ```bash
 kraken2-2.0.8-beta/kraken2-build --download-taxonomy --use-ftp --threads 32 --db databases/strex
 ```
+```bash
+kraken2-2.0.8-beta/kraken2-build --db databases/strex  --no-masking  --threads 32 --add-to-library /datasets/kraken-public/krakenData/kraken2-experiment-code/strain_excluded.fna
+```
+
 # Classification
 For each set of paired reads
 ```bash
