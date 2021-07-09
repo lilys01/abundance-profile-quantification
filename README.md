@@ -72,7 +72,7 @@ kraken2-2.0.8-beta/kraken2-build --db databases/strex --threads 32 --build
 # Classification
 For each set of paired reads
 ```bash
-kraken2-2.0.8-beta/kraken2 -db databases/16S_SILVA138_k2db --memory-mapping --threads 16 --paired --output results_small.out bacteria_very_small_1.fq bacteria_very_small_2.fq
+kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_very_small_1.fq bacteria_very_small_2.fq
 ```
 # Profiling
 ```bash
