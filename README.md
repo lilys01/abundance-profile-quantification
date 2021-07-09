@@ -66,7 +66,9 @@ kraken2-2.0.8-beta/kraken2-build --download-taxonomy --use-ftp --threads 32 --db
 ```bash
 kraken2-2.0.8-beta/kraken2-build --db databases/strex  --no-masking  --threads 32 --add-to-library /datasets/kraken-public/krakenData/kraken2-experiment-code/strain_excluded.fna
 ```
-
+```bash
+kraken2-2.0.8-beta/kraken2-build --db databases/strex --threads 32 --build
+```
 # Classification
 For each set of paired reads
 ```bash
