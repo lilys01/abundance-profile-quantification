@@ -72,16 +72,16 @@ kraken2-2.0.8-beta/kraken2-build --db databases/strex --threads 32 --build
 # Classification
 For each set of paired reads
 ```bash
-kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_very_small_1.fq bacteria_very_small_2.fq
+kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_very_small.out bacteria_very_small_1.fq bacteria_very_small_2.fq
 ```
 ```bash
 kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_small_1.fq bacteria_small_2.fq
 ```
 ```bash
-kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_1.fq bacteria_2.fq
+kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results.out bacteria_1.fq bacteria_2.fq
 ```
 ```bash
-kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_large.fq bacteria_large.fq
+kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_large.out bacteria_large_1.fq bacteria_large_2.fq
 ```
 # Profiling
 ```bash
