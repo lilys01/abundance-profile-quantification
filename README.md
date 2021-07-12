@@ -74,6 +74,15 @@ For each set of paired reads
 ```bash
 kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_very_small_1.fq bacteria_very_small_2.fq
 ```
+```bash
+kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_small_1.fq bacteria_small_2.fq
+```
+```bash
+kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_1.fq bacteria_2.fq
+```
+```bash
+kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out bacteria_large.fq bacteria_large.fq
+```
 # Profiling
 ```bash
 gprof kraken2-2.0.8-beta/classify > analysis.txt
