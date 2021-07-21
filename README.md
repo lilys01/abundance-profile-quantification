@@ -3,6 +3,7 @@
 launch-scipy-ml.sh -m 64 -c 8
 ```
 # Paired Read Simulation
+In the Selected directory, run:
 ## 45 MB
 ```bash
 for group in bacteria viruses; do
