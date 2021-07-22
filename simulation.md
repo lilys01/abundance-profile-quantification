@@ -1,5 +1,5 @@
-## Tool Installation
-# Install Mason2 v.2.0.9:
+# Tool Installation
+## Install Mason2 v.2.0.9:
 http://packages.seqan.de/mason2/
 
 For linux (64bit):
@@ -9,7 +9,7 @@ tar -xf mason2-2.0.9-Linux-x86_64.tar.xz
 PATH=$PATH:~/mason2-2.0.9-Linux-x86_64/bin
 ```
 
-# Install Kraken2:
+## Install Kraken2:
 
 ```bash
 wget http://github.com/DerrickWood/kraken2/archive/v2.0.8-beta.tar.gz
