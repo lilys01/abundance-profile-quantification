@@ -1,4 +1,5 @@
-## Install Mason2 v.2.0.9:
+## Tool Installation
+# Install Mason2 v.2.0.9:
 http://packages.seqan.de/mason2/
 
 For linux (64bit):
@@ -8,7 +9,7 @@ tar -xf mason2-2.0.9-Linux-x86_64.tar.xz
 PATH=$PATH:~/mason2-2.0.9-Linux-x86_64/bin
 ```
 
-## Install Kraken2:
+# Install Kraken2:
 
 ```bash
 wget http://github.com/DerrickWood/kraken2/archive/v2.0.8-beta.tar.gz
@@ -21,12 +22,12 @@ PATH=$PATH:~/kraken2-2.0.8-beta
 Installation Docs:
 https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#installation
 
-## Data Generation
+# Data Generation
 Followed steps in directions below, with exception to the last step which is detailed under [Paired Read Simulation](#Paired-Read-Simulation):
 https://github.com/DerrickWood/kraken2-experiment-code/blob/master/README_DataGeneration.md
 
 # Paired Read Simulation
-In the "Selected" directory, run the following commands. To change the size of the data generated, change the input to the -n flag. 5000 will generate 45 MB of read data. 
+In the "Selected" directory, run the following commands. To change the size of the data generated, change the input to the -n flag. For reference, 5000 will generate 45 MB of read data. 
 
 ```bash
 for group in bacteria; do
@@ -44,29 +45,20 @@ cat *_2.fq > simulated_data_2.fq
 
 # Database Creation
 ```bash
-kraken2-2.0.8-beta/kraken2-build --download-taxonomy --use-ftp --threads 32 --db databases/strex
+kraken2-build --download-taxonomy --use-ftp --threads 32 --db databases/strex
 ```
 ```bash
-kraken2-2.0.8-beta/kraken2-build --db databases/strex  --no-masking  --threads 32 --add-to-library /datasets/kraken-public/krakenData/kraken2-experiment-code/strain_excluded.fna
+kraken2-build --db databases/strex  --no-masking  --threads 32 --add-to-library /datasets/kraken-public/krakenData/kraken2-experiment-code/strain_excluded.fna
 ```
 ```bash
-kraken2-2.0.8-beta/kraken2-build --db databases/strex --threads 32 --build
+kraken2-build --db databases/strex --threads 32 --build
 ```
 # Classification
-For each set of paired reads
+For a set of paired reads:
 ```bash
-kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_very_small.out data/bacteria_very_small_1.fq data/bacteria_very_small_2.fq
-```
-```bash
-kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_small.out data/bacteria_small_1.fq data/bacteria_small_2.fq
-```
-```bash
-kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results.out data/bacteria_1.fq data/bacteria_2.fq
-```
-```bash
-kraken2-2.0.8-beta/kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results_large.out data/bacteria_large_1.fq data/bacteria_large_2.fq
+kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results.out simulated_data_1.fq simulated_data_2.fq
 ```
 # Profiling
 ```bash
-gprof kraken2-2.0.8-beta/classify > analysis.txt
+gprof classify > analysis.txt
  ```
