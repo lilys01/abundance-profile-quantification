@@ -23,7 +23,7 @@ Installation Docs:
 https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#installation
 
 # Data Generation
-Followed steps in directions below, with exception to the last step which is detailed under [Paired Read Simulation](#Paired-Read-Simulation):
+Follow the steps in directions below, with exception to the last step which is detailed under [Paired Read Simulation](#Paired-Read-Simulation):
 https://github.com/DerrickWood/kraken2-experiment-code/blob/master/README_DataGeneration.md
 
 # Paired Read Simulation
@@ -44,6 +44,7 @@ cat *_2.fq > simulated_data_2.fq
 ```
 
 # Database Creation
+Create the strex database used to classify the simulated reads.
 ```bash
 kraken2-build --download-taxonomy --use-ftp --threads 32 --db databases/strex
 ```
@@ -54,7 +55,7 @@ kraken2-build --db databases/strex  --no-masking  --threads 32 --add-to-library 
 kraken2-build --db databases/strex --threads 32 --build
 ```
 # Classification
-For a set of paired reads:
+For a set of paired reads, classify as follows.
 ```bash
 kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output results.out simulated_data_1.fq simulated_data_2.fq
 ```
