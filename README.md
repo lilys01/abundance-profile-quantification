@@ -23,7 +23,7 @@ Installation Docs:
 https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#installation
 
 # Data Generation
-Make a new directory. In that directory, follow the steps in directions below, with exception to the last step which is detailed under [Paired Read Simulation](#Paired-Read-Simulation):
+Make a new directory. In that directory, follow the steps in directions below, with exception to the last step which is detailed under [Paired Read Simulation](#Paired-Read-Simulation): <br />
 https://github.com/DerrickWood/kraken2-experiment-code/blob/master/README_DataGeneration.md
 
 # Paired Read Simulation
