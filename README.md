@@ -27,7 +27,7 @@ Make a new directory. In that directory, follow the steps in directions below, w
 https://github.com/DerrickWood/kraken2-experiment-code/blob/master/README_DataGeneration.md
 
 # Paired Read Simulation
-In the "Selected" directory, run the following commands. To change the size of the data generated, change the input to the -n flag, specifying the number of read pairs. For reference, 5000000 will generate two 6 GB paired-read files.
+In the "Selected" directory, run the following commands. To change the size of the data generated, change the input to the -n flag, specifying the number of read pairs. For reference, 5000000 will generate two 6 GB paired-read files. I'm estimating that -n 900000000 will create ~1 TB data.  
 
 ```bash
 for group in bacteria; do
