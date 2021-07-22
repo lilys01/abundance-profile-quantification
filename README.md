@@ -64,3 +64,4 @@ kraken2 -db databases/strex --memory-mapping --threads 16 --paired --output resu
 gprof classify > analysis.txt
  ```
 
+
