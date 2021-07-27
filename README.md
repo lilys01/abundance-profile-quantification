@@ -32,7 +32,7 @@ In the "Selected" directory, run the following commands. To change the size of t
 ```bash
 for group in bacteria; do
   for file in $group/*.fa; do
-    ~/krakenstuff/mason2-2.0.9-Linux-x86_64/bin/mason_simulator -ir $file --seed 42 -n 5000 --num-threads 4 \
+    mason_simulator -ir $file --seed 42 -n 5000 --num-threads 4 \
       -o $group/$(basename $file .fa)_1.fq \
       -or $group/$(basename $file .fa)_2.fq \
       --read-name-prefix taxid_$(basename $file .fa).
